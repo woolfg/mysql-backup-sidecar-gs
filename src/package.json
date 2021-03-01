@@ -1,0 +1,13 @@
+{
+  "name": "mysql-backup-sidecar-gs",
+  "version": "0.0.1",
+  "description": "Script to upload mysql-backup-sidecar backup data to Google Cloud Storage",
+  "main": "index.js",
+  "repository": "https://github.com/woolfg/mysql-backup-sidecar-gs",
+  "author": "Wolfgang Gassler",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@google-cloud/storage": "^5.8.0"
+  }
+}
