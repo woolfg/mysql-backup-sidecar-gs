@@ -6,7 +6,12 @@ Node.js client to upload files.
 
 ## Usage/config
 
-The configuration adds the following environment variables. (For other options see the docs of [woolfg/mysql-backup-sidecar](https://github.com/woolfg/mysql-backup-sidecar-gs))
+Requirements:
+
+- Google Cloud Storage bucket for your backups. It is also recommended to create a lifecycle policy to remove backups automatically after some time.
+- Service account user and JSON key file with at least create permissions to put files into the bucket.
+
+This project adds the following environment variables to the mother project which handles the backup itself. (For options of the mother backup container see the docs of [woolfg/mysql-backup-sidecar](https://github.com/woolfg/mysql-backup-sidecar-gs))
 
 - `GS_PROJECT_NAME` Name that is used to identify your backup files. The backups are uploaded to a directory named like the project name.
 - `GS_KEY_FILE` path to the GCP service account JSON file. We recommend to use [docker secrets](https://docs.docker.com/engine/swarm/secrets/) to mount it (see also example `docker-compose` file).
