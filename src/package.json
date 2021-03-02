@@ -8,6 +8,9 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "@google-cloud/storage": "^5.8.0"
+    "@google-cloud/storage": "^5.8.0",
+    "archiver": "^5.2.0",
+    "fast-crc32c": "^2.0.0",
+    "winston": "^3.3.3"
   }
 }

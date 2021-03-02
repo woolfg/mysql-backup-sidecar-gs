@@ -35,6 +35,12 @@ rebuild-mysql: ## build docker image without cache
 rebuild-mariadb: ## build docker image without cache
 	docker build --no-cache -t $(IMAGE_NAME):$(VERSION_TAG)-mariadb-10.5 -f mariadb/10.5/Dockerfile .
 
+.PHONY: devbackup-standalone
+devbackup-standalone: ## run a bash command in standalone backup cotainer (dev only)
+	VERSION_TAG=$(VERSION_TAG)-mariadb-10.5 \
+	DB_IMAGE=mariadb:10.5 \
+	$(DOCKER_COMPOSE_DEV) run backup /bin/bash
+
 .PHONY: runmysql
 runmysql: ## run the example docker compose stack on MySQL
 	VERSION_TAG=$(VERSION_TAG)-mysql-8.0 \

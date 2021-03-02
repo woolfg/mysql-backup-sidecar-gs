@@ -1,1 +1,4 @@
 */node_modules
+
+## prevent to upload json key files
+.*.json

@@ -13,7 +13,7 @@ services:
       - db_password      
       
   backup:
-    image: woolfg/mysql-backup-sidecar:${VERSION_TAG}
+    image: woolfg/mysql-backup-sidecar-gs:${VERSION_TAG}
     volumes:
       - mysqldata:/var/lib/mysql
       - backup:/backup
@@ -41,8 +41,16 @@ services:
 
       MYSQL_USER: root
       MYSQL_PASSWORD_FILE: /run/secrets/db_password
+
+      GS_PROJECT_NAME: myproject
+      GS_KEY_FILE: /run/secrets/gs_key_file
+      GS_BUCKET_NAME: dev_generic
+      GS_FULLBACKUPS_ONLY: "true"
+      AFTER_BACKUP_SCRIPT: node /gs-upload
+
     secrets:
       - db_password
+      - gs_key_file
 
 volumes:
   mysqldata:
@@ -51,4 +59,6 @@ volumes:
 secrets:
   db_password:
     file: db_secret
+  gs_key_file:
+    file: gs_key_file
     
