@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - bumped to mysql-backup-sidecar:v0.3.5 which fixes smaller bugs and mysql new default auth plugin
+- upgrade to node 16
 
 ## [0.1.1] - 2021-03-04
 
