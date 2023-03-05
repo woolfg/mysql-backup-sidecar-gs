@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.2] - 2023-03-05
+
+### Added
+- bumped to mysql-backup-sidecar:v0.3.5 which fixes smaller bugs and mysql new default auth plugin
+
 ## [0.1.1] - 2021-03-04
 
 ### Added
