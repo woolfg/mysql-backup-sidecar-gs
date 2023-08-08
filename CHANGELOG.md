@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.3] - 2023-08-09
+
+### Added
+- bumped to mysql-backup-sidecar:v0.3.6 which mainly uses a new Xtrabackup version supporting MySQL 8.0.33
+
 ## [0.1.2] - 2023-03-05
 
 ### Added
