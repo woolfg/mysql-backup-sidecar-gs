@@ -1,4 +1,4 @@
-FROM woolfg/mysql-backup-sidecar:0.3.6-mysql-8.0
+FROM woolfg/mysql-backup-sidecar:0.3.7-mysql-8.0
 
 LABEL maintainer="Wolfgang Gassler"
 LABEL description="XtraBackup based MySQL / MariaDB backup docker image to create incremental backups periodically and upload it to GCP storage"
