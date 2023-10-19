@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.5] - 2023-19-19
+
+- Pump to woolfg/mysql-backup-sidecar:0.3.8 which added support to delete older backups
+
 ## [0.1.4] - 2023-08-21
 
 - Pump to woolfg/mysql-backup-sidecar:0.3.7-mysql-8.0 which supports MySQL 8.0.34 and higher
