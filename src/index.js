@@ -13,7 +13,7 @@ const logger = winston.createLogger({
 const gsKeyFile = process.env.GS_KEY_FILE
 const gsBucketName = process.env.GS_BUCKET_NAME
 const projectName = process.env.GS_PROJECT_NAME || process.env.HOSTNAME
-const fullBackupsOnly = process.env.GS_FULLBACKUPS_ONLY || false
+const fullBackupsOnly = process.env.GS_FULLBACKUPS_ONLY === 'true'
 
 const backupStatus = process.argv[2]
 const backupStdout = process.argv[3]
